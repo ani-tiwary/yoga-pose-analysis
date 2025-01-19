@@ -183,6 +183,8 @@ def main():
     
     cap = cv2.VideoCapture(0)
     
+    cv2.namedWindow("Yoga Pose Analysis", cv2.WINDOW_NORMAL)
+
     with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
         while cap.isOpened():
             ret, frame = cap.read()
