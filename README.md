@@ -63,6 +63,5 @@ http://localhost:5000
 
 ## Notes
 
-- Make sure you have good lighting for better pose detection
-- Stand at a reasonable distance from the camera
-- Wear clothing that contrasts with your background for better pose detection 
+- Make sure you have good lighting and avoid very baggy clothing
+- Stand at a reasonable distance from the camera (frame should contain full body)
