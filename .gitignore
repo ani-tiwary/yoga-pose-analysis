@@ -38,3 +38,4 @@ instance/
 *.jpg
 *.jpeg
 *.png 
+yoga_app.log
