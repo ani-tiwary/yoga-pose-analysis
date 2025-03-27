@@ -21,6 +21,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-bottom: 20px;
+            position: relative;
         }
         .controls {
             background-color: #fff;
@@ -32,9 +33,30 @@
         .pose-button {
             margin: 5px;
             transition: all 0.3s ease;
+            position: relative;
         }
         .pose-button:hover {
             transform: translateY(-2px);
+        }
+        .pose-button.loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        .pose-button.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            border: 2px solid #fff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: translateY(-50%) rotate(360deg); }
         }
         #videoFeed {
             width: 100%;
@@ -47,11 +69,32 @@
             color: #2c3e50;
             margin-bottom: 15px;
         }
+        .error-message {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #dc3545;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            z-index: 1000;
+            display: none;
+        }
+        .pose-description {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #0d6efd;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="text-center mb-4">Yoga Pose Analysis</h1>
+        
+        <div class="error-message" id="errorMessage"></div>
         
         <div class="row">
             <div class="col-md-8">
@@ -59,7 +102,7 @@
                     <div class="current-pose text-center">
                         Current Pose: <span id="currentPose">None</span>
                     </div>
-                    <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+                    <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video Feed" onerror="handleVideoError()">
                 </div>
             </div>
             
@@ -67,15 +110,18 @@
                 <div class="controls">
                     <h3 class="mb-3">Select Pose</h3>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary pose-button" onclick="setPose('warrior2')">
+                        <button class="btn btn-primary pose-button" onclick="setPose('warrior2')" id="warrior2Btn">
                             Warrior II
                         </button>
-                        <button class="btn btn-primary pose-button" onclick="setPose('tree')">
+                        <button class="btn btn-primary pose-button" onclick="setPose('tree')" id="treeBtn">
                             Tree Pose
                         </button>
-                        <button class="btn btn-primary pose-button" onclick="setPose('triangle')">
+                        <button class="btn btn-primary pose-button" onclick="setPose('triangle')" id="triangleBtn">
                             Triangle Pose
                         </button>
+                    </div>
+                    <div class="pose-description" id="poseDescription">
+                        Select a pose to see instructions and tips.
                     </div>
                 </div>
             </div>
@@ -83,7 +129,29 @@
     </div>
 
     <script>
+        const poseDescriptions = {
+            warrior2: "Warrior II Pose (Virabhadrasana II):\n- Stand with feet wide apart\n- Turn right foot out 90 degrees\n- Bend right knee to 90 degrees\n- Arms parallel to ground\n- Keep torso facing forward",
+            tree: "Tree Pose (Vrksasana):\n- Stand on one leg\n- Place other foot on inner thigh\n- Hands above head\n- Keep hips level\n- Focus on a fixed point",
+            triangle: "Triangle Pose (Trikonasana):\n- Wide stance\n- Straight legs\n- Tilt torso to side\n- One hand down, one up\n- Keep chest open"
+        };
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        function handleVideoError() {
+            showError('Error accessing camera. Please check permissions and try again.');
+        }
+
         function setPose(pose) {
+            const button = document.getElementById(`${pose}Btn`);
+            button.classList.add('loading');
+            
             fetch('/set_pose', {
                 method: 'POST',
                 headers: {
@@ -91,21 +159,43 @@
                 },
                 body: JSON.stringify({ pose: pose })
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to set pose');
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.status === 'success') {
                     updateCurrentPose();
+                    document.getElementById('poseDescription').textContent = poseDescriptions[pose];
                 }
+            })
+            .catch(error => {
+                showError('Error setting pose: ' + error.message);
+            })
+            .finally(() => {
+                button.classList.remove('loading');
             });
         }
 
         function updateCurrentPose() {
             fetch('/get_current_pose')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to get current pose');
+                }
+                return response.json();
+            })
             .then(data => {
                 document.getElementById('currentPose').textContent = data.pose;
+            })
+            .catch(error => {
+                showError('Error getting current pose: ' + error.message);
             });
         }
+
+        // Update current pose every 2 seconds
         setInterval(updateCurrentPose, 2000);
     </script>
 </body>

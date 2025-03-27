@@ -1,0 +1,525 @@
+2025-03-27 17:28:47,789 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 17:28:47,790 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 17:28:47,791 - INFO -  * Restarting with stat
+2025-03-27 17:28:48,585 - WARNING -  * Debugger is active!
+2025-03-27 17:28:48,593 - INFO -  * Debugger PIN: 805-610-015
+2025-03-27 17:28:54,098 - INFO - 127.0.0.1 - - [27/Mar/2025 17:28:54] "GET / HTTP/1.1" 200 -
+2025-03-27 17:28:54,713 - INFO - Camera initialized successfully
+2025-03-27 17:28:55,081 - INFO - 127.0.0.1 - - [27/Mar/2025 17:28:55] "GET /video_feed HTTP/1.1" 200 -
+2025-03-27 17:28:56,167 - INFO - 127.0.0.1 - - [27/Mar/2025 17:28:56] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:28:57,589 - INFO - Pose set to: Warrior II
+2025-03-27 17:28:57,589 - INFO - 127.0.0.1 - - [27/Mar/2025 17:28:57] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:28:57,898 - INFO - 127.0.0.1 - - [27/Mar/2025 17:28:57] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:28:58,463 - INFO - 127.0.0.1 - - [27/Mar/2025 17:28:58] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:00,468 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:00] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:02,474 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:02] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:04,473 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:04] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:04,732 - INFO - Pose set to: Tree Pose
+2025-03-27 17:29:04,732 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:04] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:29:05,040 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:05] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:06,468 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:06] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:08,472 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:08] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:09,948 - INFO - Pose set to: Triangle Pose
+2025-03-27 17:29:09,948 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:09] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:29:10,260 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:10] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:10,567 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:10] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:12,473 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:12] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:14,446 - INFO - Pose set to: Tree Pose
+2025-03-27 17:29:14,446 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:14] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:29:14,480 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:14] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:14,782 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:14] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:15,683 - INFO - Pose set to: Warrior II
+2025-03-27 17:29:15,683 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:15] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:29:15,998 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:15] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:16,198 - INFO - Pose set to: Triangle Pose
+2025-03-27 17:29:16,198 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:16] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:29:16,467 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:16] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:16,770 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:16] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:18,464 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:18] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:20,465 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:20] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:22,472 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:22] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:24,467 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:24] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:27,167 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:27] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:29,161 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:29] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:31,164 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:31] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:33,162 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:33] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:35,170 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:35] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:36,634 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:36] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:38,469 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:38] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:39,584 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:39] "GET / HTTP/1.1" 200 -
+2025-03-27 17:29:39,944 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:39] "GET /video_feed HTTP/1.1" 200 -
+2025-03-27 17:29:41,622 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:41] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:42,236 - INFO - Pose set to: Triangle Pose
+2025-03-27 17:29:42,236 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:42] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:29:42,547 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:42] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:43,936 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:43] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:45,929 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:45] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:47,937 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:47] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:29:57,916 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:57] "GET / HTTP/1.1" 200 -
+2025-03-27 17:29:58,212 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:58] "GET /video_feed HTTP/1.1" 200 -
+2025-03-27 17:29:59,919 - INFO - Pose set to: Tree Pose
+2025-03-27 17:29:59,919 - INFO - 127.0.0.1 - - [27/Mar/2025 17:29:59] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:30:00,246 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:00] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:00,565 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:00] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:02,066 - INFO - Pose set to: Tree Pose
+2025-03-27 17:30:02,069 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:02] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:30:02,280 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:02] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:02,478 - INFO - Pose set to: Triangle Pose
+2025-03-27 17:30:02,478 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:02] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:30:02,594 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:02] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:02,910 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:02] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:04,276 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:04] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:04,854 - INFO - Pose set to: Warrior II
+2025-03-27 17:30:04,854 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:04] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:30:05,163 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:05] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:06,278 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:06] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:08,296 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:08] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:10,279 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:10] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:12,288 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:12] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:14,278 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:14] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:16,277 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:16] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:30,245 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:30] "GET / HTTP/1.1" 200 -
+2025-03-27 17:30:30,544 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:30] "GET /video_feed HTTP/1.1" 200 -
+2025-03-27 17:30:31,237 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:31] "GET / HTTP/1.1" 200 -
+2025-03-27 17:30:31,590 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:31] "GET /video_feed HTTP/1.1" 200 -
+2025-03-27 17:30:33,279 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:33] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:36,175 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:36] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:38,170 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:38] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:40,165 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:40] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:42,166 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:42] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:44,171 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:44] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:46,164 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:46] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:48,174 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:48] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:50,183 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:50] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:52,177 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:52] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:54,175 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:54] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:56,169 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:56] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:30:58,173 - INFO - 127.0.0.1 - - [27/Mar/2025 17:30:58] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:00,176 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:00] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:02,160 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:02] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:04,170 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:04] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:05,807 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:05,855 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:05,878 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:05,901 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:05,926 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:05,964 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:05,998 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,039 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,064 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,098 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,129 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,160 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:06] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:06,164 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,198 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,232 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,263 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,298 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,330 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,365 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,398 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,431 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,466 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,498 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,530 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,589 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,635 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:06,710 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,109 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,134 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,159 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:08] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:08,168 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,198 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,228 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,266 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,297 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,335 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,368 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,401 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,435 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,466 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,502 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,534 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,565 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,596 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,635 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,660 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,697 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,728 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,768 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,797 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,833 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,865 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,893 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,927 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,964 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:08,993 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,031 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,064 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,474 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,498 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,531 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,566 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,599 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,632 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,665 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,700 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,753 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,777 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,822 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,868 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,893 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,916 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:09,959 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,006 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,027 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,048 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,072 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,098 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,132 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,162 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:10] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:10,166 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,198 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,228 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,270 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,301 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,334 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,361 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,395 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,431 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,461 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,498 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,532 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,562 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,598 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,630 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,666 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,701 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,735 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,766 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,798 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,832 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,866 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,899 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,932 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:10,967 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,001 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,028 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,065 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,095 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,131 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,162 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,199 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,228 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,263 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,298 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,331 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,365 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,397 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,430 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,464 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,499 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,532 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,566 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,598 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,631 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,664 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,695 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,729 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,762 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,798 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,832 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,865 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,895 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,931 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,964 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:11,997 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,029 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,065 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,099 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,133 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,168 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:12] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:12,197 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,231 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,268 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,299 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,330 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,364 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,398 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,432 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,464 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,495 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,532 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,563 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,600 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,626 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,662 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,701 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,734 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,766 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,796 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,830 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,860 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,897 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,931 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,965 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:12,993 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,030 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,062 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,097 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,129 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,165 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,197 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,230 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,264 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,297 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,333 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,364 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,398 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,430 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,463 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,504 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,530 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,565 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,599 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,630 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,664 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,698 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,733 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,765 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,798 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,832 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,862 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,900 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,930 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,965 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:13,996 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,030 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,063 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,096 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,131 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,165 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,170 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:14] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:14,197 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,231 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,266 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,298 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,332 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,366 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,397 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,428 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,464 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,497 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,528 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,563 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,597 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,631 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,664 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,699 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,729 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,764 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,801 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,834 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,865 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,895 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,930 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,962 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:14,998 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,032 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,065 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,097 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,134 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,164 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,199 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,227 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,265 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,296 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,330 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,364 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,400 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,428 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,464 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,496 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,529 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,565 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,596 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,630 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,663 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,698 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,733 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,765 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,797 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,832 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,863 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,899 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,931 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,964 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:15,996 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,032 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,061 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,097 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,131 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,162 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:16] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:16,193 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,227 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,265 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,296 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,331 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,362 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,398 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,432 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,464 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,497 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,532 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,565 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,601 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,631 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,664 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,697 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,729 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,766 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,798 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,831 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,864 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,898 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,930 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,960 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:16,997 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,032 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,065 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,099 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,131 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,164 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,197 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,230 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,265 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,297 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,332 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,364 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,398 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,431 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,461 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,495 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,526 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,564 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,593 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,630 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,663 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,698 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,729 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,765 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,797 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,831 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,864 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,897 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,931 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,964 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:17,997 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,030 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,066 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,095 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,131 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,165 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,169 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:18] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:18,200 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,235 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,264 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,297 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,329 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,368 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,393 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,431 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,463 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,495 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,530 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,563 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,598 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,633 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,668 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,697 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,730 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,765 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,798 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,832 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,865 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,899 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,929 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,962 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:18,997 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,031 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,065 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,098 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,132 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,165 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,198 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,231 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,266 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:19,297 - ERROR - Error processing landmarks: 'NoneType' object has no attribute 'landmark'
+2025-03-27 17:31:20,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:20] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:22,170 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:22] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:24,177 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:24] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:25,712 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:25] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:26,221 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:26] "GET / HTTP/1.1" 200 -
+2025-03-27 17:31:26,577 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:26] "GET /video_feed HTTP/1.1" 200 -
+2025-03-27 17:31:28,265 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:28] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:30,442 - INFO - Pose set to: Tree Pose
+2025-03-27 17:31:30,444 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:30] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:31:30,577 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:30] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:30,892 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:30] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:32,002 - INFO - Pose set to: Triangle Pose
+2025-03-27 17:31:32,002 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:32] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:31:32,309 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:32] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:32,626 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:32] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:34,569 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:34] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:36,569 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:36] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:38,576 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:38] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:40,567 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:40] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:42,567 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:42] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:44,561 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:44] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:45,368 - INFO - Pose set to: Tree Pose
+2025-03-27 17:31:45,368 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:45] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:31:45,677 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:45] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:45,893 - INFO - Pose set to: Warrior II
+2025-03-27 17:31:45,896 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:45] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:31:46,201 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:46] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:46,534 - INFO - Pose set to: Tree Pose
+2025-03-27 17:31:46,534 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:46] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:31:46,568 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:46] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:46,878 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:46] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:47,467 - INFO - Pose set to: Triangle Pose
+2025-03-27 17:31:47,467 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:47] "POST /set_pose HTTP/1.1" 200 -
+2025-03-27 17:31:47,775 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:47] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:48,569 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:48] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:51,159 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:51] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:53,162 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:53] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:55,169 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:55] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:57,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:57] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:31:59,166 - INFO - 127.0.0.1 - - [27/Mar/2025 17:31:59] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:01,169 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:01] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:03,160 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:03] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:05,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:05] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:07,155 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:07] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:09,161 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:09] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:11,175 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:11] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:13,170 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:13] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:15,159 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:15] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:17,164 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:17] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:19,161 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:19] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:21,162 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:21] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:23,174 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:23] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:25,154 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:25] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:27,162 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:27] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:29,169 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:29] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:31,171 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:31] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:33,165 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:33] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:35,156 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:35] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:37,169 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:37] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:39,175 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:39] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:41,158 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:41] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:43,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:43] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:45,168 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:45] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:47,161 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:47] "GET /get_current_pose HTTP/1.1" 200 -
+2025-03-27 17:32:49,181 - INFO - 127.0.0.1 - - [27/Mar/2025 17:32:49] "GET /get_current_pose HTTP/1.1" 200 -
