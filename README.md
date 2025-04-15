@@ -26,10 +26,10 @@ git clone <repository-url>
 cd yoga-pose-analysis
 ```
 
-2. Create a virtual environment (recommended):
+2. Create a virtual environment (not necessary, might not work):
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv\Scripts\activate
 ```
 
 3. Install the required packages:
