@@ -61,23 +61,26 @@ class PoseAnalyzer:
             front_leg = "left"
         
         if front_knee_angle < 65 or front_knee_angle > 115:
-            feedback.append("Adjust front knee bend (aim for roughly 90 degrees)")
+            if front_knee_angle < 65:
+                feedback.append("Bend your front knee more - aim for 90 degrees")
+            else:
+                feedback.append("Straighten your front knee slightly - aim for 90 degrees")
             
         if back_knee_angle < 140:
-            feedback.append("Straighten back leg more")
+            feedback.append("Straighten your back leg more")
             
         hip_shoulder_angle = self.calculate_angle(right_shoulder, right_hip, left_hip)
         hip_shoulder_angle_alt = self.calculate_angle(left_shoulder, left_hip, right_hip)
         
         better_hip_angle = min(abs(hip_shoulder_angle - 90), abs(hip_shoulder_angle_alt - 90))
         if better_hip_angle > 25:
-            feedback.append("Square hips to the side")
+            feedback.append("Turn your hips to face the side")
         
         right_arm_height_diff = abs(right_wrist[1] - right_shoulder[1])
         left_arm_height_diff = abs(left_wrist[1] - left_shoulder[1])
         
         if right_arm_height_diff > 0.1 or left_arm_height_diff > 0.1:
-            feedback.append("Bring arms more parallel to ground")
+            feedback.append("Keep your arms parallel to the ground")
             
         return feedback
 
@@ -109,17 +112,17 @@ class PoseAnalyzer:
             knee_reference = left_knee
         
         if standing_leg_angle < 160:
-            feedback.append("Straighten standing leg more")
+            feedback.append("Straighten your standing leg more")
             
         hip_angle = self.calculate_angle(right_hip, 
                                        [(right_hip[0] + left_hip[0])/2, right_hip[1]], 
                                        left_hip)
         if abs(hip_angle - 180) > 25:
-            feedback.append("Keep hips level")
+            feedback.append("Keep your hips level and balanced")
             
         foot_height = abs(raised_foot[1] - knee_reference[1])
         if foot_height > 0.15:
-            feedback.append("Raise foot higher on inner thigh")
+            feedback.append("Place your raised foot higher on your inner thigh")
         
         right_hands_height = right_wrist[1] < right_shoulder[1]
         left_hands_height = left_wrist[1] < left_shoulder[1]
@@ -146,13 +149,13 @@ class PoseAnalyzer:
 
         stance_width = abs(right_ankle[0] - left_ankle[0])
         if stance_width < 0.3:
-            feedback.append("Widen your stance")
+            feedback.append("Widen your stance - feet should be 3-4 feet apart")
 
         right_leg_angle = self.calculate_angle(right_hip, right_knee, right_ankle)
         left_leg_angle = self.calculate_angle(left_hip, left_knee, left_ankle)
         
         if right_leg_angle < 160 or left_leg_angle < 160:
-            feedback.append("Straighten both legs")
+            feedback.append("Keep both legs straight")
 
         spine_angle = self.calculate_angle(
             [(right_shoulder[0] + left_shoulder[0])/2, right_shoulder[1]],
@@ -165,7 +168,7 @@ class PoseAnalyzer:
 
         wrist_distance = abs(right_wrist[0] - left_wrist[0])
         if wrist_distance > 0.15:
-            feedback.append("Align arms in a vertical line")
+            feedback.append("Align your arms in a vertical line")
 
         return feedback
 
@@ -192,7 +195,7 @@ class PoseAnalyzer:
                 break
         
         if out_of_frame:
-            feedback.append("Please step back to get your entire body in frame")
+            feedback.append("Step back to get your entire body in the camera view")
             
         return feedback
 

@@ -52,19 +52,7 @@ def generate_frames():
                 image.flags.writeable = True
                 image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
                 
-                try:
-                    landmarks = results.pose_landmarks.landmark
-                    if pose_analyzer.current_pose:
-                        feedback = pose_analyzer.analyze_pose(landmarks)
-                        
-                        y_position = 30
-                        for tip in feedback:
-                            cv2.putText(image, tip, (10, y_position), 
-                                      cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
-                            y_position += 30
-                except Exception as e:
-                    logging.error(f"Error processing landmarks: {str(e)}")
-                
+                # Draw pose landmarks without text overlay
                 mp.solutions.drawing_utils.draw_landmarks(
                     image, 
                     results.pose_landmarks, 
@@ -94,6 +82,42 @@ def video_feed():
     except Exception as e:
         logging.error(f"Error in video_feed: {str(e)}")
         return jsonify({'error': 'Failed to start video feed'}), 500
+
+@app.route('/get_feedback')
+def get_feedback():
+    try:
+        camera = get_camera()
+        success, frame = camera.read()
+        if not success:
+            return jsonify({'error': 'Failed to read frame'}), 500
+            
+        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        image.flags.writeable = False
+        results = pose.process(image)
+        image.flags.writeable = True
+        
+        if results.pose_landmarks:
+            landmarks = results.pose_landmarks.landmark
+            feedback = pose_analyzer.analyze_pose(landmarks)
+            
+            # Determine if pose is correct (no feedback means good form)
+            is_correct = len(feedback) == 0
+            
+            return jsonify({
+                'feedback': feedback,
+                'is_correct': is_correct,
+                'current_pose': pose_analyzer.current_pose.value if pose_analyzer.current_pose else 'None'
+            })
+        else:
+            return jsonify({
+                'feedback': ['No pose detected. Please stand in front of the camera.'],
+                'is_correct': False,
+                'current_pose': pose_analyzer.current_pose.value if pose_analyzer.current_pose else 'None'
+            })
+            
+    except Exception as e:
+        logging.error(f"Error getting feedback: {str(e)}")
+        return jsonify({'error': 'Failed to get feedback'}), 500
 
 @app.route('/set_pose', methods=['POST'])
 def set_pose():

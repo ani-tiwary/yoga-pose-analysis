@@ -4,143 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoga Pose Analysis</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'yoga-green': '#10B981',
+                        'yoga-red': '#EF4444',
+                        'yoga-blue': '#3B82F6',
+                        'yoga-purple': '#8B5CF6'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .video-container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .controls {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .pose-button {
-            margin: 5px;
+        
+        .feedback-card {
             transition: all 0.3s ease;
-            position: relative;
         }
-        .pose-button:hover {
+        
+        .feedback-card:hover {
             transform: translateY(-2px);
         }
-        .pose-button.loading {
-            pointer-events: none;
-            opacity: 0.7;
+        
+        .pose-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .pose-button.loading::after {
+        
+        .pose-button::before {
             content: '';
             position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .pose-button:hover::before {
+            left: 100%;
+        }
+        
+        .pose-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .pose-button.active {
+            background: linear-gradient(135deg, #10B981, #059669);
+            transform: scale(1.05);
+        }
+        
+        .video-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .feedback-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .status-indicator {
             width: 20px;
             height: 20px;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            border: 2px solid #fff;
             border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s linear infinite;
+            animation: pulse 2s infinite;
         }
-        @keyframes spin {
-            to { transform: translateY(-50%) rotate(360deg); }
+        
+        .status-indicator.good {
+            background-color: #10B981;
         }
-        #videoFeed {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 8px;
+        
+        .status-indicator.needs-improvement {
+            background-color: #F59E0B;
         }
-        .current-pose {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        .error-message {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #dc3545;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            z-index: 1000;
-            display: none;
-        }
-        .pose-description {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #0d6efd;
+        
+        .status-indicator.error {
+            background-color: #EF4444;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1 class="text-center mb-4">Yoga Pose Analysis</h1>
-        
-        <div class="error-message" id="errorMessage"></div>
-        
-        <div class="row">
-            <div class="col-md-8">
-                <div class="video-container">
-                    <div class="current-pose text-center">
-                        Current Pose: <span id="currentPose">None</span>
+<body class="bg-black min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-5xl font-bold text-white mb-4">🧘‍♀️ Yoga Pose Analysis</h1>
+            <p class="text-xl text-gray-300">Perfect your form with real-time feedback</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Video Feed -->
+            <div class="lg:col-span-2">
+                <div class="video-container glass-effect p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-2xl font-semibold text-white">Live Camera Feed</h2>
+                        <div class="flex items-center space-x-2">
+                            <div id="statusIndicator" class="status-indicator"></div>
+                            <span id="currentPose" class="text-white font-medium">No pose selected</span>
+                        </div>
                     </div>
-                    <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video Feed" onerror="handleVideoError()">
+                    <div class="relative">
+                        <img id="videoFeed" src="{{ url_for('video_feed') }}" 
+                             alt="Video Feed" 
+                             class="w-full rounded-lg shadow-lg"
+                             onerror="handleVideoError()">
+                        <div class="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                            Live
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="col-md-4">
-                <div class="controls">
-                    <h3 class="mb-3">Select Pose</h3>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary pose-button" onclick="setPose('warrior2')" id="warrior2Btn">
-                            Warrior II
+
+            <!-- Controls and Feedback -->
+            <div class="space-y-6">
+                <!-- Pose Selection -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Select Pose</h3>
+                    <div class="space-y-3">
+                        <button class="pose-button w-full bg-gray-800 hover:bg-gray-700 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 border border-gray-600" 
+                                onclick="setPose('warrior2')" id="warrior2Btn">
+                            ⚔️ Warrior II
                         </button>
-                        <button class="btn btn-primary pose-button" onclick="setPose('tree')" id="treeBtn">
-                            Tree Pose
+                        <button class="pose-button w-full bg-gray-800 hover:bg-gray-700 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 border border-gray-600" 
+                                onclick="setPose('tree')" id="treeBtn">
+                            🌳 Tree Pose
                         </button>
-                        <button class="btn btn-primary pose-button" onclick="setPose('triangle')" id="triangleBtn">
-                            Triangle Pose
+                        <button class="pose-button w-full bg-gray-800 hover:bg-gray-700 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 border border-gray-600" 
+                                onclick="setPose('triangle')" id="triangleBtn">
+                            🔺 Triangle Pose
                         </button>
-                    </div>
-                    <div class="pose-description" id="poseDescription">
-                        Select a pose to see instructions and tips.
                     </div>
                 </div>
+
+                <!-- Pose Instructions -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Instructions</h3>
+                    <div id="poseDescription" class="text-gray-300 text-lg leading-relaxed">
+                        Select a pose to see detailed instructions and tips for proper form.
+                    </div>
+                </div>
+
+                <!-- Real-time Feedback -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Real-time Feedback</h3>
+                    <div id="feedbackContainer" class="space-y-3">
+                        <div class="text-center text-gray-400 text-lg">
+                            Select a pose to start receiving feedback
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 hidden">
+            <div class="flex items-center space-x-2">
+                <span>⚠️</span>
+                <span id="errorText"></span>
             </div>
         </div>
     </div>
 
     <script>
         const poseDescriptions = {
-            warrior2: "Warrior II Pose (Virabhadrasana II):\n- Stand with feet wide apart\n- Turn right foot out 90 degrees\n- Bend right knee to 90 degrees\n- Arms parallel to ground\n- Keep torso facing forward",
-            tree: "Tree Pose (Vrksasana):\n- Stand on one leg\n- Place other foot on inner thigh\n- Hands above head\n- Keep hips level\n- Focus on a fixed point",
-            triangle: "Triangle Pose (Trikonasana):\n- Wide stance\n- Straight legs\n- Tilt torso to side\n- One hand down, one up\n- Keep chest open"
+            warrior2: `⚔️ <strong>Warrior II Pose (Virabhadrasana II)</strong><br><br>
+                      • Stand with feet wide apart (3-4 feet)<br>
+                      • Turn right foot out 90 degrees<br>
+                      • Bend right knee to 90 degrees<br>
+                      • Arms parallel to ground<br>
+                      • Keep torso facing forward<br>
+                      • Square hips to the side`,
+            tree: `🌳 <strong>Tree Pose (Vrksasana)</strong><br><br>
+                   • Stand on one leg<br>
+                   • Place other foot on inner thigh<br>
+                   • Hands above head in prayer position<br>
+                   • Keep hips level<br>
+                   • Focus on a fixed point ahead`,
+            triangle: `🔺 <strong>Triangle Pose (Trikonasana)</strong><br><br>
+                       • Wide stance (3-4 feet apart)<br>
+                       • Straight legs<br>
+                       • Tilt torso to the side<br>
+                       • One hand down, one hand up<br>
+                       • Keep chest open and facing forward`
         };
+
+        let currentPose = null;
+        let feedbackInterval = null;
 
         function showError(message) {
             const errorDiv = document.getElementById('errorMessage');
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
+            const errorText = document.getElementById('errorText');
+            errorText.textContent = message;
+            errorDiv.classList.remove('hidden');
             setTimeout(() => {
-                errorDiv.style.display = 'none';
+                errorDiv.classList.add('hidden');
             }, 5000);
         }
 
@@ -148,9 +229,20 @@
             showError('Error accessing camera. Please check permissions and try again.');
         }
 
+        function updateStatusIndicator(status) {
+            const indicator = document.getElementById('statusIndicator');
+            indicator.className = 'status-indicator ' + status;
+        }
+
         function setPose(pose) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.pose-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to selected button
             const button = document.getElementById(`${pose}Btn`);
-            button.classList.add('loading');
+            button.classList.add('active');
             
             fetch('/set_pose', {
                 method: 'POST',
@@ -167,15 +259,22 @@
             })
             .then(data => {
                 if (data.status === 'success') {
+                    currentPose = pose;
                     updateCurrentPose();
-                    document.getElementById('poseDescription').textContent = poseDescriptions[pose];
+                    document.getElementById('poseDescription').innerHTML = poseDescriptions[pose];
+                    
+                    // Start feedback polling
+                    if (feedbackInterval) {
+                        clearInterval(feedbackInterval);
+                    }
+                    feedbackInterval = setInterval(updateFeedback, 1000);
+                    
+                    // Initial feedback update
+                    updateFeedback();
                 }
             })
             .catch(error => {
                 showError('Error setting pose: ' + error.message);
-            })
-            .finally(() => {
-                button.classList.remove('loading');
             });
         }
 
@@ -195,8 +294,60 @@
             });
         }
 
-        // Update current pose every 2 seconds
-        setInterval(updateCurrentPose, 2000);
+        function updateFeedback() {
+            if (!currentPose) return;
+            
+            fetch('/get_feedback')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to get feedback');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const feedbackContainer = document.getElementById('feedbackContainer');
+                
+                if (data.is_correct) {
+                    updateStatusIndicator('good');
+                    feedbackContainer.innerHTML = `
+                        <div class="feedback-card bg-green-500/20 border-2 border-green-500 rounded-xl p-4 text-center">
+                            <div class="text-4xl mb-2">🎉</div>
+                            <div class="text-green-400 font-bold text-2xl">Perfect Form!</div>
+                            <div class="text-green-300 text-lg mt-2">Keep it up!</div>
+                        </div>
+                    `;
+                } else {
+                    if (data.feedback.length === 0) {
+                        updateStatusIndicator('needs-improvement');
+                        feedbackContainer.innerHTML = `
+                            <div class="text-center text-gray-400 text-lg">
+                                Analyzing your pose...
+                            </div>
+                        `;
+                    } else {
+                        updateStatusIndicator('error');
+                        let feedbackHTML = '';
+                        data.feedback.forEach((tip, index) => {
+                            feedbackHTML += `
+                                <div class="feedback-card bg-red-500/20 border-2 border-red-500 rounded-xl p-4">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="text-red-400 text-2xl">⚠️</div>
+                                        <div class="text-red-300 font-semibold text-lg">${tip}</div>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        feedbackContainer.innerHTML = feedbackHTML;
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error updating feedback:', error);
+            });
+        }
+
+        // Initialize
+        updateCurrentPose();
     </script>
 </body>
 </html> 
