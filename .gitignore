@@ -39,3 +39,4 @@ instance/
 *.jpeg
 *.png 
 *.log
+yoga_env/

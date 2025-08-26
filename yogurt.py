@@ -60,7 +60,7 @@ class PoseAnalyzer:
             back_knee_angle = right_knee_angle
             front_leg = "left"
         
-        if front_knee_angle < 75 or front_knee_angle > 105:
+        if front_knee_angle < 65 or front_knee_angle > 115:
             feedback.append("Adjust front knee bend (aim for roughly 90 degrees)")
             
         if back_knee_angle < 140:
@@ -169,7 +169,39 @@ class PoseAnalyzer:
 
         return feedback
 
+    def check_body_in_frame(self, landmarks): # check if entire body is visible
+        feedback = []
+        
+        # Check key body parts that should be visible
+        key_landmarks = [
+            mp_pose.PoseLandmark.NOSE,
+            mp_pose.PoseLandmark.LEFT_SHOULDER,
+            mp_pose.PoseLandmark.RIGHT_SHOULDER,
+            mp_pose.PoseLandmark.LEFT_HIP,
+            mp_pose.PoseLandmark.RIGHT_HIP,
+            mp_pose.PoseLandmark.LEFT_ANKLE,
+            mp_pose.PoseLandmark.RIGHT_ANKLE
+        ]
+        
+        # Check if any key landmarks are outside the frame (coordinates should be between 0 and 1)
+        out_of_frame = False
+        for landmark in key_landmarks:
+            x, y = landmarks[landmark.value].x, landmarks[landmark.value].y
+            if x < 0.05 or x > 0.95 or y < 0.05 or y > 0.95:
+                out_of_frame = True
+                break
+        
+        if out_of_frame:
+            feedback.append("Please step back to get your entire body in frame")
+            
+        return feedback
+
     def analyze_pose(self, landmarks): # analyses current pose, gives feedback
+        # First check if body is in frame
+        frame_feedback = self.check_body_in_frame(landmarks)
+        if frame_feedback:
+            return frame_feedback
+            
         if self.current_pose == YogaPose.WARRIOR2:
             return self.analyze_warrior2(landmarks)
         elif self.current_pose == YogaPose.TREE:

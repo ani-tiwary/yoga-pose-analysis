@@ -26,10 +26,15 @@ git clone <repository-url>
 cd yoga-pose-analysis
 ```
 
-2. Create a virtual environment (not necessary, might not work):
+2. Create and activate a virtual environment (recommended):
 ```bash
-python -m venv venv
-source venv\Scripts\activate
+# Windows
+python -m venv yoga_env
+yoga_env\Scripts\activate
+
+# macOS/Linux
+python -m venv yoga_env
+source yoga_env/bin/activate
 ```
 
 3. Install the required packages:
@@ -39,21 +44,32 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Start the Flask application:
+1. **Activate the virtual environment** (if not already active):
+```bash
+# Windows
+yoga_env\Scripts\activate
+
+# macOS/Linux
+source yoga_env/bin/activate
+```
+
+2. **Start the Flask application**:
 ```bash
 python app.py
 ```
 
-2. Open your web browser and navigate to:
+3. **Open your web browser** and navigate to:
 ```
 http://localhost:5000
 ```
 
-3. Allow camera access when prompted by your browser.
+4. **Allow camera access** when prompted by your browser.
 
-4. Select a pose from the buttons on the right side of the screen.
+5. **Select a pose** from the buttons on the right side of the screen.
 
-5. Follow the on-screen feedback to improve your pose.
+6. **Follow the on-screen feedback** to improve your pose.
+
+**Note:** The app will automatically detect if your entire body is in frame and prompt you to adjust if needed.
 
 ## Controls
 
